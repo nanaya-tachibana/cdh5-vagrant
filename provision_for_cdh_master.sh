@@ -479,6 +479,9 @@ echo '    <value>p@ssw0rd</value>' >> /etc/oozie/conf.vagrant/oozie-site.xml
 echo '  </property>' >> /etc/oozie/conf.vagrant/oozie-site.xml
 echo '</configuration>' >> /etc/oozie/conf.vagrant/oozie-site.xml
 
+# oozie default hadoop config 
+cp /etc/hadoop/conf.vagrant/core-site.xml /etc/oozie/conf.vagrant/hadoop-conf/core-site.xml
+
 # create table schemas
 sudo -u oozie /usr/lib/oozie/bin/ooziedb.sh create -run
 
