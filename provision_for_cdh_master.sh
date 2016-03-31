@@ -494,7 +494,7 @@ rm -f ext-2.2.zip
 # install oozie shared libs
 sudo -u hdfs hadoop fs -mkdir -p /user/oozie/deployments
 sudo -u hdfs hadoop fs -chown -R oozie:oozie /user/oozie
-sudo oozie-setup sharelib create -fs  hdfs://cdh-master:8020 -locallib /usr/lib/oozie/oozie-sharelib-yarn.tar.gz
+sudo oozie-setup sharelib create -fs  hdfs://cdh-master:8020 -locallib /usr/lib/oozie/oozie-sharelib-yarn
 
 sed -i 's/export OOZIE_CONFIG=\/etc\/oozie\/conf/export OOZIE_CONFIG=\/etc\/oozie\/conf.vagrant/' /etc/oozie/conf.vagrant/oozie-env.sh
 
