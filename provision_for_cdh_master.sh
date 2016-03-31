@@ -585,7 +585,7 @@ sed -i 's/## webhdfs_url=http:\/\/localhost:50070\/webhdfs\/v1/webhdfs_url=http:
 # yarn
 sed -i 's/## resourcemanager_host=localhost/resourcemanager_host=cdh-master/' /etc/hue/conf.vagrant/hue.ini
 sed -i 's/# history_server_api_url=http:\/\/localhost:19888/history_server_api_url=http:\/\/cdh-manager:19888/' /etc/hue/conf.vagrant/hue.ini
-sed -i 's/## resourcemanager_api_url=http:\/\/localhost:8088/resourcemanager_api_url=http:\/\/cdh-master:8088/' /etc/hue/conf.vagrant/hue.ini
+sed -i '0,/## resourcemanager_api_url=http:\/\/localhost:8088/s/## resourcemanager_api_url=http:\/\/localhost:8088/resourcemanager_api_url=http:\/\/cdh-master:8088/' /etc/hue/conf.vagrant/hue.ini
 sed -i 's/## proxy_api_url=http:\/\/localhost:8088/proxy_api_url=http:\/\/cdh-master:8088/' /etc/hue/conf.vagrant/hue.ini
 
 
